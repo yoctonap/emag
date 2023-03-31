@@ -12,6 +12,12 @@ class HomePage(BasePage):
     SEARCH_INPUT = (By.ID, 'searchboxTrigger')
     INTRA_IN_CONT_CLOSE_BTN = (By.XPATH, '(//i[@class="em em-close"]/parent::button)[3]')
 
+    TAB_ITEM = (By.XPATH, "//a[@title='Placeholder']")
+
+    def click_on_menu_tab(self, tab_name):
+        self.wait_and_click_elem_by_selector(self.TAB_ITEM[0],
+                                             self.TAB_ITEM[1].replace("Placeholder", tab_name))
+
     def navigate_to_home_page(self):
         self.driver.get('https://www.emag.ro/')
 

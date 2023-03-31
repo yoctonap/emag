@@ -36,5 +36,3 @@ def step_impl(context, category):
 @when('home: I click subcategory "{subcategory}"')
 def step_impl(context, subcategory):
     context.home_page.click_menu_subcategory(subcategory)
-
-
